@@ -17,6 +17,8 @@ export interface ServicePackage {
   link?: string;
   originalPrice?: string;
   discount?: string;
+  notes?: string[];
+  note?: string;
 }
 
 export interface Service {
@@ -38,6 +40,8 @@ export interface Service {
   saleOriginalPrice?: string;
   packages?: ServicePackage[];
   isEnterprise?: boolean;
+  audience?: 'individuals' | 'enterprise';
+  category?: string;
 }
 
 interface WhyChooseItem {
@@ -132,6 +136,15 @@ interface UIServicesEntry {
   readMore?: string;
   readLess?: string;
   notesLabel?: string;
+  audiencesLabel?: string;
+  audienceOptions?: Record<string, string>;
+  individualCategoriesLabel?: string;
+  individualCategories?: Record<string, string>;
+  emptyStateTitle?: string;
+  emptyStateDescription?: string;
+  packagesLabel?: string;
+  packagePriceLabel?: string;
+  packageSessionsLabel?: string;
 }
 
 interface UISocialsEntry {

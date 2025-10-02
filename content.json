@@ -130,6 +130,8 @@
       {
         "title": "كوتشينج الأداء والإنتاجية",
         "description": "أساعدك على تحديد أهداف واضحة، والاستعداد بفعالية لاجتماعات تقييم الأداء، وبناء مسارك المهني بخطوات واثقة. هدفنا معًا رفع مستوى إنتاجيتك وتعزيز التزامك بالمسؤولية.",
+        "audience": "individuals",
+        "category": "performance",
         "features": [
           "تحديد أهداف واضحة وقابلة للقياس",
           "إعداد خطط الأداء والإنتاجية",
@@ -144,14 +146,16 @@
         "durationValue": 1,
         "durationLabel": "المدة بالساعات",
         "link": "#consultation",
-        "note": "جلسة واحدة - جلسة مركّزة تعطيك حلولًا عملية سريعة لأهدافك",
         "packages": [
           {
             "name": "جلسة واحدة",
             "description": "جلسة مركّزة تعطيك حلولًا عملية سريعة لأهدافك",
             "price": "500 ريال",
             "sessions": 1,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "جلسة مركّزة تعطيك حلولًا عملية سريعة لأهدافك"
+            ]
           },
           {
             "name": "3 جلسات",
@@ -160,7 +164,10 @@
             "originalPrice": "1,500 ريال",
             "discount": "خصم 10%",
             "sessions": 3,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "خطة أهداف واضحة مع متابعة للتقدّم وتغذية راجعة بنّاءة"
+            ]
           },
           {
             "name": "5 جلسات",
@@ -169,7 +176,10 @@
             "originalPrice": "2,500 ريال",
             "discount": "خصم 12%",
             "sessions": 5,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "كوتشينج معمّق يشمل مراجعات للتقدّم وخطط للتحضير للأداء"
+            ]
           },
           {
             "name": "7 جلسات",
@@ -178,13 +188,18 @@
             "originalPrice": "3,500 ريال",
             "discount": "خصم 15%",
             "sessions": 7,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "رحلة متكاملة تتضمن متابعة مستمرة، تقييمات متخصّصة، وخطة نجاح شخصية شاملة"
+            ]
           }
         ]
       },
       {
         "title": "كوتشينج الذكاء العاطفي والمرونة",
         "description": "أرشدك لاكتساب وعي أعمق بذاتك، وتنمية مهاراتك في إدارة المشاعر، وبناء مرونتك النفسية لتتمكن من مواجهة التحديات بثقة واتزان. جميع الجلسات تتضمن تقييمات للذكاء العاطفي لمتابعة تطورك وفهم أعمق لأنماطك.",
+        "audience": "individuals",
+        "category": "emotional",
         "features": [
           "تقييمات الذكاء العاطفي المعتمدة",
           "تطوير الوعي الذاتي والعاطفي",
@@ -200,14 +215,16 @@
         "durationValue": 1,
         "durationLabel": "المدة بالساعات",
         "link": "#consultation",
-        "note": "جلسة واحدة - جلسة مخصصة لمعالجة تحدٍ واحد باستخدام أدوات عملية مباشرة + تقييم للذكاء العاطفي",
         "packages": [
           {
             "name": "جلسة واحدة",
             "description": "جلسة مخصصة لمعالجة تحدٍ واحد باستخدام أدوات عملية مباشرة + تقييم للذكاء العاطفي",
             "price": "500 ريال",
             "sessions": 1,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "جلسة مخصصة لمعالجة تحدٍ واحد باستخدام أدوات عملية مباشرة + تقييم للذكاء العاطفي"
+            ]
           },
           {
             "name": "3 جلسات",
@@ -216,7 +233,10 @@
             "originalPrice": "1,500 ريال",
             "discount": "خصم 10%",
             "sessions": 3,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "تطوير الوعي العاطفي من خلال تمارين للتأمل الذاتي + مراجعة نتائج التقييم"
+            ]
           },
           {
             "name": "5 جلسات",
@@ -225,7 +245,10 @@
             "originalPrice": "2,500 ريال",
             "discount": "خصم 12%",
             "sessions": 5,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "جلسات كوتشينج تشمل تدريبات على المرونة، متابعة للتقدّم، مع تحديث وتحليل نتائج التقييم العاطفي"
+            ]
           },
           {
             "name": "7 جلسات",
@@ -234,13 +257,18 @@
             "originalPrice": "3,500 ريال",
             "discount": "خصم 15%",
             "sessions": 7,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "برنامج متكامل يتضمن تقييمات عاطفية معمّقة، كوتشينج معمّق، وخطة شخصية لتعزيز المرونة"
+            ]
           }
         ]
       },
       {
         "title": "خدمات المؤسسات",
         "description": "برامج تطوير مخصصة للفرق والمؤسسات لتعزيز الثقافة المؤسسية والذكاء العاطفي في بيئة العمل.",
+        "audience": "enterprise",
+        "category": "enterprise",
         "features": [
           "برامج تدريبية تفاعلية مخصصة",
           "تطوير القيادات والفرق",
@@ -264,6 +292,8 @@
       {
         "title": "Performance & Productivity Coaching",
         "description": "I help you set clear goals, prepare for performance cycle meetings, and position yourself for success. Together, we'll boost your productivity and accountability.",
+        "audience": "individuals",
+        "category": "performance",
         "features": [
           "Set clear and measurable goals",
           "Develop performance and productivity plans",
@@ -278,14 +308,16 @@
         "durationValue": 1,
         "durationLabel": "Duration hrs",
         "link": "#consultation",
-        "note": "1 Session - Quick focus on your goals with immediate tools",
         "packages": [
           {
             "name": "1 Session",
             "description": "Quick focus on your goals with immediate tools",
             "price": "500 SAR",
             "sessions": 1,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "Quick focus on your goals with immediate tools"
+            ]
           },
           {
             "name": "3 Sessions",
@@ -294,7 +326,10 @@
             "originalPrice": "1,500 SAR",
             "discount": "10% off",
             "sessions": 3,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "Goal-setting with progress tracking and feedback"
+            ]
           },
           {
             "name": "5 Sessions",
@@ -303,7 +338,10 @@
             "originalPrice": "2,500 SAR",
             "discount": "12% off",
             "sessions": 5,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "Deeper coaching, progress reviews, and performance preparation"
+            ]
           },
           {
             "name": "7 Sessions",
@@ -312,13 +350,18 @@
             "originalPrice": "3,500 SAR",
             "discount": "15% off",
             "sessions": 7,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "Full coaching journey with continuous follow-up, assessments, and success plan"
+            ]
           }
         ]
       },
       {
         "title": "Emotional Intelligence & Resilience Coaching",
         "description": "I guide you to manage emotions, build resilience, and strengthen self-awareness so you can handle challenges with confidence and balance. All sessions include emotional intelligence assessments to track your growth and provide clearer insights.",
+        "audience": "individuals",
+        "category": "emotional",
         "features": [
           "Certified emotional intelligence assessments",
           "Develop self-awareness and emotional awareness",
@@ -334,14 +377,16 @@
         "durationValue": 1,
         "durationLabel": "Duration hrs",
         "link": "#consultation",
-        "note": "1 Session - Focus on one key challenge with practical tools + emotional intelligence assessment",
         "packages": [
           {
             "name": "1 Session",
             "description": "Focus on one key challenge with practical tools + emotional intelligence assessment",
             "price": "500 SAR",
             "sessions": 1,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "Focus on one key challenge with practical tools + emotional intelligence assessment"
+            ]
           },
           {
             "name": "3 Sessions",
@@ -350,7 +395,10 @@
             "originalPrice": "1,500 SAR",
             "discount": "10% off",
             "sessions": 3,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "Emotional awareness building with self-reflection exercises + assessment review"
+            ]
           },
           {
             "name": "5 Sessions",
@@ -359,7 +407,10 @@
             "originalPrice": "2,500 SAR",
             "discount": "12% off",
             "sessions": 5,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "Coaching with resilience practices, progress check-ins, and updated assessment insights"
+            ]
           },
           {
             "name": "7 Sessions",
@@ -368,13 +419,18 @@
             "originalPrice": "3,500 SAR",
             "discount": "15% off",
             "sessions": 7,
-            "link": "#consultation"
+            "link": "#consultation",
+            "notes": [
+              "Full program with assessments, deep coaching, and a personal resilience plan"
+            ]
           }
         ]
       },
       {
         "title": "Enterprise Solutions",
         "description": "Customized development programs for teams and organizations to enhance organizational culture and emotional intelligence in the workplace.",
+        "audience": "enterprise",
+        "category": "enterprise",
         "features": [
           "Customized interactive training programs",
           "Leadership and team development",
@@ -573,7 +629,8 @@
   ],
   "trustedBy": [
     "2.png",
-    "1.png"
+    "1.png",
+    "3.svg"
   ],
   "whatsapp": {
     "phone": "+966550123456",
@@ -593,7 +650,22 @@
         "eyebrow": "خدمات مُصممة لنجاحك",
         "readMore": "عرض المزيد",
         "readLess": "عرض أقل",
-        "notesLabel": "الملاحظات:"
+        "notesLabel": "الملاحظات:",
+        "packagesLabel": "الباقات",
+        "packagePriceLabel": "السعر",
+        "packageSessionsLabel": "الجلسات",
+        "audiencesLabel": "الفئة المستفيدة",
+        "audienceOptions": {
+          "individuals": "الأفراد",
+          "enterprise": "المؤسسات"
+        },
+        "individualCategoriesLabel": "مجالات الكوتشينج",
+        "individualCategories": {
+          "performance": "كوتشينج الأداء والإنتاجية",
+          "emotional": "كوتشينج الذكاء العاطفي والمرونة"
+        },
+        "emptyStateTitle": "لا توجد خدمات متاحة",
+        "emptyStateDescription": "سيتم تحديث هذه الفئة قريبًا."
       },
       "en": {
         "heading": "My Coaching Services",
@@ -605,7 +677,22 @@
         "eyebrow": "Services Crafted for Your Growth",
         "readMore": "View more",
         "readLess": "View less",
-        "notesLabel": "Notes:"
+        "notesLabel": "Notes:",
+        "packagesLabel": "Packages",
+        "packagePriceLabel": "Price",
+        "packageSessionsLabel": "Sessions",
+        "audiencesLabel": "Select audience",
+        "audienceOptions": {
+          "individuals": "Individuals",
+          "enterprise": "Organizations"
+        },
+        "individualCategoriesLabel": "Coaching focus",
+        "individualCategories": {
+          "performance": "Performance & Productivity Coaching",
+          "emotional": "Emotional Intelligence & Resilience Coaching"
+        },
+        "emptyStateTitle": "No services available",
+        "emptyStateDescription": "This category will be updated soon."
       }
     },
     "testimonials": {
