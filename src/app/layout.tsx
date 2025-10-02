@@ -59,22 +59,23 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   openGraph: {
-    title: 'مهند الغامدي',
-    // no description as requested
-    url: 'https://mohcareer.com',
-    siteName: 'MoCareer',
+    title: 'Coach Amjaad',
+    description: 'Professional development and emotional intelligence coaching with Amjaad Gandeh.',
+    url: 'https://coachamjaad.com',
+    siteName: 'Coach Amjaad',
     type: 'website',
     locale: 'ar_SA',
     images: [
       {
         url: '/Logo_Splash.png',
-        alt: 'مهند الغامدي',
+        alt: 'Coach Amjaad logo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'مهند الغامدي',
+    title: 'Coach Amjaad',
+    description: 'Your success partner for emotional intelligence and professional growth.',
     images: ['/Logo_Splash.png'],
   },
 };
