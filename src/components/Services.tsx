@@ -199,6 +199,9 @@ const Services = () => {
     });
   }, [visibleServices]);
 
+  const shouldCenterSingleCard = serviceCards.length === 1;
+  const hasLonelyDesktopCard = serviceCards.length > 1 && serviceCards.length % 3 === 1;
+
   useEffect(() => {
     if (activeAudience === 'enterprise') {
       if (activeCategory !== '') {
@@ -384,8 +387,15 @@ const Services = () => {
             )}
           </div>
         ) : (
-          <div className="mt-10 grid justify-center gap-5 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
+          <div
+            className={`mt-10 grid gap-5 sm:mt-12 ${
+              shouldCenterSingleCard
+                ? 'place-items-center justify-center sm:grid-cols-1 lg:grid-cols-1'
+                : 'justify-center sm:grid-cols-2 lg:grid-cols-3'
+            }`}
+          >
             {serviceCards.map(({ service, pkg, id }, index) => {
+              const isLonelyDesktopCard = hasLonelyDesktopCard && index === serviceCards.length - 1;
               const bookingHref = pkg?.link ?? service?.link;
               const isExternal =
                 typeof bookingHref === 'string' &&
@@ -443,7 +453,9 @@ const Services = () => {
               return (
                 <div
                   key={id}
-                  className="group relative flex h-full w-full max-w-[360px] flex-col rounded-2xl border p-5 sm:p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl animate-fade-in-up"
+                  className={`group relative flex h-full w-full max-w-[360px] flex-col rounded-2xl border p-5 sm:p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl animate-fade-in-up${
+                    isLonelyDesktopCard ? ' lg:col-start-2 lg:justify-self-center' : ''
+                  }`}
                   style={{
                     backgroundColor: palette.cardBg,
                     borderColor: accentTint,

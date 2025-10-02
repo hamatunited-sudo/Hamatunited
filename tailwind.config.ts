@@ -18,7 +18,8 @@ export default {
         foreground: 'hsl(var(--foreground))',
       },
       fontFamily: {
-        sans: ['system-ui', 'Noto Sans Arabic', 'sans-serif'],
+        sans: ['var(--font-latin)', 'var(--font-noto-arabic)', 'Merriweather', 'Noto Naskh Arabic', 'serif'],
+        serif: ['var(--font-latin)', 'var(--font-noto-arabic)', 'Merriweather', 'Noto Naskh Arabic', 'serif'],
       },
       animation: {
         'parallax': 'parallax 20s ease-in-out infinite',

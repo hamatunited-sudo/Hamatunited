@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useTheme } from '@/contexts/UnifiedThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -58,9 +59,13 @@ const Hero = () => {
       }}
     >
       {/* Decorative Shapes: moved req.png to top-left; removed sm-shape.png */}
-      <img
+      <Image
         src={language === 'en' ? '/req_en.png' : '/req.png'}
         alt="decorative"
+        width={384}
+        height={384}
+        priority
+        sizes="(max-width: 640px) 160px, (max-width: 1024px) 256px, 384px"
         className={`left-shape absolute top-0 ${isRTL ? 'left-0 -translate-y-1/4 -translate-x-1/4' : 'right-0 -translate-y-1/4 translate-x-1/4'} w-40 h-40 sm:w-64 sm:h-64 lg:w-96 lg:h-96 object-contain opacity-75 pointer-events-none z-0`}
       />
 
@@ -152,14 +157,20 @@ const Hero = () => {
             {/* Certification Logos */}
             <div className={`flex logos flex-wrap gap-4 sm:gap-6 mt-8 opacity-90 ${isRTL ? 'justify-center lg:justify-start' : 'justify-center lg:justify-start'} items-center`}
             >
-              <img 
+              <Image 
                 src="/Certificate/EQPC Badge رخصة.png" 
                 alt="EQPC Certification" 
+                width={96}
+                height={96}
+                sizes="96px"
                 className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain drop-shadow-md"
               />
-              <img 
+              <Image 
                 src="/Certificate/AQai Certification Badge.png" 
                 alt="AQai Certification" 
+                width={96}
+                height={96}
+                sizes="96px"
                 className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain drop-shadow-md"
               />
             </div>
@@ -169,9 +180,13 @@ const Hero = () => {
             <div className="relative w-full max-w-sm sm:max-w-md">
               <div className="absolute -top-6 -right-6 w-24 h-24 sm:w-36 sm:h-36 rounded-full border-4 border-[#50b7af]/30 backdrop-blur-sm" />
               <div className="absolute -bottom-6 -left-6 w-20 h-20 sm:w-32 sm:h-32 rounded-3xl bg-[#50b7af]/10" />
-              <img 
+              <Image 
                 src="/Profile_image.png" 
                 alt="Coach Amjaad"
+                width={640}
+                height={640}
+                priority
+                sizes="(max-width: 640px) 320px, (max-width: 1024px) 400px, 480px"
                 className="relative z-10 w-full rounded-[2.5rem] shadow-2xl object-contain bg-white/80"
               />
             </div>

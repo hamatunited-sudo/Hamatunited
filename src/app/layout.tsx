@@ -1,23 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans_Arabic } from "next/font/google";
+import { Merriweather, Noto_Naskh_Arabic } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "../contexts/LanguageContext";
 import { ThemeProvider } from "../contexts/UnifiedThemeContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const formalLatin = Merriweather({
+  variable: "--font-latin",
   subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const notoArabic = Noto_Sans_Arabic({
-  variable: '--font-noto-arabic',
-  // include arabic subset so glyphs render consistently on all platforms
-  subsets: ['arabic', 'latin'],
+const formalArabic = Noto_Naskh_Arabic({
+  variable: "--font-noto-arabic",
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 export const viewport = {
@@ -128,7 +126,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${notoArabic.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${formalArabic.variable} ${formalLatin.variable} antialiased`}
         suppressHydrationWarning
       >
         <ThemeProvider>
