@@ -1,0 +1,230 @@
+{
+  "services": {
+    "ar": [
+      {
+        "title": "كوتشينج الأداء والإنتاجية",
+        "description": "أساعدك على تحديد أهداف واضحة، والاستعداد بفعالية لاجتماعات تقييم الأداء، وبناء مسارك المهني بخطوات واثقة.",
+        "features": [
+          "تحديد أهداف واضحة وقابلة للقياس",
+          "إعداد خطط الأداء والإنتاجية",
+          "متابعة التقدم والتطوير",
+          "أدوات عملية للتطبيق الفوري"
+        ],
+        "price": "500 ريال",
+        "sessions": 1,
+        "sessionsValue": 1,
+        "sessionsLabel": "عدد الجلسات",
+        "duration": "1 ساعة",
+        "durationValue": 1,
+        "durationLabel": "المدة بالساعات",
+        "link": "#consultation",
+        "packages": [
+          {
+            "name": "جلسة واحدة",
+            "price": "500 ريال",
+            "sessions": 1
+          },
+          {
+            "name": "3 جلسات",
+            "price": "1,350 ريال",
+            "originalPrice": "1,500 ريال",
+            "discount": "خصم 10%",
+            "sessions": 3
+          },
+          {
+            "name": "5 جلسات",
+            "price": "2,200 ريال",
+            "originalPrice": "2,500 ريال", 
+            "discount": "خصم 12%",
+            "sessions": 5
+          },
+          {
+            "name": "7 جلسات",
+            "price": "3,000 ريال",
+            "originalPrice": "3,500 ريال",
+            "discount": "خصم 15%",
+            "sessions": 7
+          }
+        ]
+      },
+      {
+        "title": "كوتشينج الذكاء العاطفي والمرونة", 
+        "description": "أرشدك لاكتساب وعي أعمق بذاتك، وتنمية مهاراتك في إدارة المشاعر، وبناء مرونتك النفسية.",
+        "features": [
+          "تقييمات الذكاء العاطفي المعتمدة",
+          "تطوير الوعي الذاتي والعاطفي", 
+          "بناء المرونة النفسية",
+          "إدارة المشاعر والضغوط"
+        ],
+        "price": "500 ريال",
+        "sessions": 1,
+        "sessionsValue": 1,
+        "sessionsLabel": "عدد الجلسات",
+        "duration": "1 ساعة", 
+        "durationValue": 1,
+        "durationLabel": "المدة بالساعات",
+        "link": "#consultation",
+        "packages": [
+          {
+            "name": "جلسة واحدة",
+            "price": "500 ريال",
+            "sessions": 1
+          },
+          {
+            "name": "3 جلسات",
+            "price": "1,350 ريال",
+            "originalPrice": "1,500 ريال",
+            "discount": "خصم 10%",
+            "sessions": 3
+          },
+          {
+            "name": "5 جلسات",
+            "price": "2,200 ريال",
+            "originalPrice": "2,500 ريال",
+            "discount": "خصم 12%",
+            "sessions": 5
+          },
+          {
+            "name": "7 جلسات", 
+            "price": "3,000 ريال",
+            "originalPrice": "3,500 ريال",
+            "discount": "خصم 15%",
+            "sessions": 7
+          }
+        ]
+      },
+      {
+        "title": "خدمات المؤسسات",
+        "description": "لخدمات الشركات وبرامج تطوير الفرق، يسعدني تواصلكم معي لبحث الأنسب لاحتياجاتكم.",
+        "features": [
+          "برامج تدريبية تفاعلية مخصصة",
+          "تطوير القيادات والفرق", 
+          "بناء ثقافة عمل إيجابية",
+          "استشارات في الثقافة المؤسسية"
+        ],
+        "price": "تواصل للاستفسار",
+        "sessions": 0,
+        "sessionsValue": 0,
+        "sessionsLabel": "حسب الحاجة",
+        "duration": "حسب البرنامج",
+        "durationValue": 0,
+        "durationLabel": "المدة",
+        "link": "#consultation",
+        "isEnterprise": true
+      }
+    ],
+    "en": [
+      {
+        "title": "Performance & Productivity Coaching",
+        "description": "I help you set clear goals, prepare for performance cycle meetings, and position yourself for success.",
+        "features": [
+          "Set clear and measurable goals",
+          "Develop performance and productivity plans",
+          "Track progress and development", 
+          "Practical tools for immediate application"
+        ],
+        "price": "500 SAR",
+        "sessions": 1,
+        "sessionsValue": 1,
+        "sessionsLabel": "Sessions",
+        "duration": "1 hour",
+        "durationValue": 1,
+        "durationLabel": "Duration hrs",
+        "link": "#consultation",
+        "packages": [
+          {
+            "name": "1 Session",
+            "price": "500 SAR",
+            "sessions": 1
+          },
+          {
+            "name": "3 Sessions", 
+            "price": "1,350 SAR",
+            "originalPrice": "1,500 SAR",
+            "discount": "10% off",
+            "sessions": 3
+          },
+          {
+            "name": "5 Sessions",
+            "price": "2,200 SAR", 
+            "originalPrice": "2,500 SAR",
+            "discount": "12% off",
+            "sessions": 5
+          },
+          {
+            "name": "7 Sessions",
+            "price": "3,000 SAR",
+            "originalPrice": "3,500 SAR",
+            "discount": "15% off",
+            "sessions": 7
+          }
+        ]
+      },
+      {
+        "title": "Emotional Intelligence & Resilience Coaching",
+        "description": "I guide you to manage emotions, build resilience, and strengthen self-awareness so you can handle challenges with confidence.",
+        "features": [
+          "Certified emotional intelligence assessments",
+          "Develop self-awareness and emotional awareness",
+          "Build psychological resilience", 
+          "Manage emotions and stress"
+        ],
+        "price": "500 SAR",
+        "sessions": 1,
+        "sessionsValue": 1,
+        "sessionsLabel": "Sessions",
+        "duration": "1 hour",
+        "durationValue": 1,
+        "durationLabel": "Duration hrs",
+        "link": "#consultation",
+        "packages": [
+          {
+            "name": "1 Session",
+            "price": "500 SAR",
+            "sessions": 1
+          },
+          {
+            "name": "3 Sessions",
+            "price": "1,350 SAR",
+            "originalPrice": "1,500 SAR", 
+            "discount": "10% off",
+            "sessions": 3
+          },
+          {
+            "name": "5 Sessions",
+            "price": "2,200 SAR",
+            "originalPrice": "2,500 SAR",
+            "discount": "12% off",
+            "sessions": 5
+          },
+          {
+            "name": "7 Sessions",
+            "price": "3,000 SAR",
+            "originalPrice": "3,500 SAR",
+            "discount": "15% off", 
+            "sessions": 7
+          }
+        ]
+      },
+      {
+        "title": "Enterprise Solutions",
+        "description": "For enterprise solutions and team programs, let's connect to explore what fits your needs best.",
+        "features": [
+          "Customized interactive training programs",
+          "Leadership and team development",
+          "Building positive workplace culture",
+          "Organizational culture consulting"
+        ],
+        "price": "Contact for Inquiry",
+        "sessions": 0,
+        "sessionsValue": 0,
+        "sessionsLabel": "As needed",
+        "duration": "Program based",
+        "durationValue": 0,
+        "durationLabel": "Duration",
+        "link": "#consultation", 
+        "isEnterprise": true
+      }
+    ]
+  }
+}
