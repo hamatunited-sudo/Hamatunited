@@ -4,6 +4,7 @@ import "./globals.css";
 import { LanguageProvider } from "../contexts/LanguageContext";
 import { ThemeProvider } from "../contexts/UnifiedThemeContext";
 import ButtonSelector from '@/components/ButtonSelector';
+import WhatsAppFloat from '@/components/WhatsAppFloat';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -141,6 +142,7 @@ export default function RootLayout({
         <ThemeProvider>
           <LanguageProvider>
             <ButtonSelector />
+            <WhatsAppFloat />
             {children}
           </LanguageProvider>
         </ThemeProvider>

@@ -102,19 +102,19 @@ const FAQ = () => {
               color: palette.accents.secondary
             }}
           >
-            {faqEyebrow}
+            {String(faqEyebrow)}
           </span>
           <h2
             className="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl"
             style={{ color: palette.text.heading }}
           >
-            {faqTitle}
+            {String(faqTitle)}
           </h2>
           <p
             className="mx-auto mt-3 max-w-3xl text-base sm:text-lg"
             style={{ color: hexToRgba(palette.text.body, 0.9) }}
           >
-            {faqDescription}
+            {String(faqDescription)}
           </p>
         </div>
 

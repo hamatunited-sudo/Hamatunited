@@ -223,19 +223,19 @@ export default function LogoCarousel() {
             style={{ backgroundColor: palette.secondary }}
           >
             <ShieldCheck className="h-4 w-4" />
-            {sectionCopy.eyebrow}
+            {String(sectionCopy.eyebrow)}
           </span>
           <h2
             className="text-3xl font-bold tracking-tight sm:text-4xl"
             style={{ color: isDark ? "#f8fafc" : "#0f172a" }}
           >
-            {sectionCopy.title}
+            {String(sectionCopy.title)}
           </h2>
           <p
             className="mt-4 text-base leading-relaxed sm:text-lg"
             style={{ color: isDark ? "#cbd5f5" : "#1f2937" }}
           >
-            {sectionCopy.description}
+            {String(sectionCopy.description)}
           </p>
         </div>
 
@@ -253,14 +253,14 @@ export default function LogoCarousel() {
             style={{ backgroundColor: palette.primary }}
           >
             <Sparkles className="mr-2 h-4 w-4" />
-            {badgeLabel}
+            {String(badgeLabel)}
           </div>
 
           {partnerLogos.length > 1 && (
             <>
               <button
                 type="button"
-                aria-label={carouselLabel || undefined}
+                aria-label={String(carouselLabel) || undefined}
                 onClick={() => scroll("left")}
                 className="absolute left-3 top-1/2 hidden -translate-y-1/2 rounded-full p-2 transition-all sm:flex z-20"
                 style={{
@@ -273,7 +273,7 @@ export default function LogoCarousel() {
               </button>
               <button
                 type="button"
-                aria-label={carouselLabel || undefined}
+                aria-label={String(carouselLabel) || undefined}
                 onClick={() => scroll("right")}
                 className="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-full p-2 transition-all sm:flex z-20"
                 style={{
@@ -356,11 +356,11 @@ export default function LogoCarousel() {
 
           <div className="mt-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
             <div>
-              <p className="text-sm font-medium uppercase tracking-[0.2em]" style={{ color: palette.primary }}>
-                {taglineLabel}
+                <p className="text-sm font-medium uppercase tracking-[0.2em]" style={{ color: palette.primary }}>
+                {String(taglineLabel)}
               </p>
               <h3 className="mt-2 text-xl font-semibold" style={{ color: isDark ? "#f8fafc" : "#0f172a" }}>
-                {subheadingLabel}
+                {String(subheadingLabel)}
               </h3>
             </div>
             <div className="flex items-center gap-3">
@@ -368,7 +368,7 @@ export default function LogoCarousel() {
                 className="inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold text-white"
                 style={{ backgroundColor: palette.secondary }}
               >
-                {ctaPrimaryLabel}
+                {String(ctaPrimaryLabel)}
               </span>
               <span
                 className="rounded-full px-4 py-2 text-sm font-medium"
@@ -377,7 +377,7 @@ export default function LogoCarousel() {
                   color: isDark ? "#e2e8f0" : "#0f172a"
                 }}
               >
-                {ctaSecondaryLabel}
+                {String(ctaSecondaryLabel)}
               </span>
             </div>
           </div>

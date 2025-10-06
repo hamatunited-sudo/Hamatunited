@@ -31,8 +31,8 @@ export const ThemeToggle: React.FC = () => {
           : 'bg-orange-100 hover:bg-orange-200 focus:ring-orange-400'
         }
       `}
-      title={toggleLabel}
-      aria-label={toggleLabel}
+  title={String(toggleLabel)}
+  aria-label={String(toggleLabel)}
     >
       <div className="flex items-center justify-center w-full h-full">
         {isDark ? (

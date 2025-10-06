@@ -1,4 +1,22 @@
 {
+  "whatsapp": {
+    "phone": "966135650006",
+    "message_ar": "مرحباً، أود الاستفسار عن خدمات حقن التربة",
+    "message_en": "Hello, I would like to inquire about soil injection services",
+    "urlTemplate": "https://wa.me/{{phone}}?text={{message}}"
+  },
+  "ui": {
+    "whatsapp": {
+      "ar": {
+        "buttonTitle": "تواصل معنا عبر واتساب",
+        "tooltip": "تحدث معنا الآن"
+      },
+      "en": {
+        "buttonTitle": "Contact us via WhatsApp",
+        "tooltip": "Chat with us now"
+      }
+    }
+  },
   "ar": {
     "siteName": "هامات يوناتيد",
     "tagline": "أفضل شركة حقن تربة في الدمام",
