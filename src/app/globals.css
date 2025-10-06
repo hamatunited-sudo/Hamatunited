@@ -2,10 +2,11 @@
 
 /* Enhanced CSS Variables for Smooth Theme Transitions */
 :root {
-  --background: 0 0% 100%;
+  --background: #;
   --foreground: 0 0% 9%;
   --primary: 30 102 108;
   --gold: 194 161 90;
+  --theme-accent: #F6A668; /* warm peach/orange used for selected states */
   --card: 0 0% 100%;
   --card-foreground: 0 0% 9%;
   --border: 0 0% 89%;
@@ -15,9 +16,9 @@
   --accent-foreground: 0 0% 9%;
   --transition-duration: 400ms;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
-  --scrollbar-thumb: #50B7AF;
-  --scrollbar-thumb-hover: #6FD1C9;
-  --scrollbar-track: rgba(80, 183, 175, 0.18);
+  --scrollbar-thumb: #46250A;
+  --scrollbar-thumb-hover: #83522A;
+  --scrollbar-track: #291200;
 }
 
 .dark {
@@ -140,14 +141,50 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 /* Custom utilities for our brand colors */
-.text-teal { color: #1e666c !important; }
-.text-teal-light { color: #3b8a90 !important; }
-.text-cyan { color: #00b3a8 !important; }
+.text-teal { color: #ffffff !important; }
+.text-teal-light { color: rgba(255, 255, 255, 0.75) !important; }
+.text-cyan { color: rgba(255, 228, 199, 0.95) !important; }
 .text-gold { color: #ffd700 !important; }
 
-.bg-teal { background-color: #1e666c !important; }
-.bg-teal-light { background-color: #3b8a90 !important; }
-.bg-cyan { background-color: #00b3a8 !important; }
+.bg-teal { background-color: #46250A !important; }
+.bg-teal-light { background-color: #6F3F1A !important; }
+.bg-cyan { background-color: #83522A !important; }
+
+/* Selected / active button utilities (theme-aware) */
+:root {
+  --selected-ring: 0 0 0 6px rgba(246,166,104,0.14);
+  --selected-border: 3px solid var(--theme-accent);
+}
+
+/* Use `.is-selected` on any button or link to apply the theme-selected appearance */
+.is-selected {
+  border-radius: 9999px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0.24), rgba(0,0,0,0.38));
+  border: var(--selected-border);
+  box-shadow: var(--selected-ring), 0 8px 20px rgba(0,0,0,0.5);
+  color: #fff !important;
+}
+
+/* lighter outline-only selected style (for transparent buttons) */
+.is-selected-outline {
+  border-radius: 9999px;
+  background: transparent;
+  border: 3px solid var(--theme-accent);
+  box-shadow: 0 0 0 6px rgba(246,166,104,0.12);
+  color: #fff !important;
+}
+
+/* Small helper to invert text on the accent when used as filled background */
+.is-selected-filled {
+  background: var(--theme-accent);
+  color: #46250A !important; /* dark text on peach */
+  border: none;
+  box-shadow: 0 8px 24px rgba(246,166,104,0.18);
+}
 
 /* Comprehensive Theme Transitions */
 * {
@@ -397,21 +434,21 @@ html[lang="en"], body[dir="ltr"] {
 }
 .bg-gold { background-color: #ffd700 !important; }
 
-.hover\:bg-teal-light:hover { background-color: #3b8a90 !important; }
+.hover\:bg-teal-light:hover { background-color: #6F3F1A !important; }
 .hover\:bg-gold-light:hover { background-color: #ffe14d !important; }
 .hover\:bg-gold\/90:hover { background-color: rgba(255, 215, 0, 0.9) !important; }
-.hover\:text-teal:hover { color: #1e666c !important; }
+.hover\:text-teal:hover { color: #ffffff !important; }
 
 /* Background and foreground utilities */
 .bg-background { background-color: hsl(var(--background)) !important; }
 .text-foreground { color: hsl(var(--foreground)) !important; }
 
-.hover\:text-teal:hover { color: var(--teal); }
-.hover\:text-teal-light:hover { color: var(--teal-light); }
-.hover\:text-cyan:hover { color: var(--cyan); }
+.hover\:text-teal:hover { color: #ffffff !important; }
+.hover\:text-teal-light:hover { color: rgba(255, 255, 255, 0.75) !important; }
+.hover\:text-cyan:hover { color: rgba(255, 228, 199, 0.95) !important; }
 
-.border-teal { border-color: var(--teal); }
-.border-teal-light { border-color: var(--teal-light); }
+.border-teal { border-color: #ffffff !important; }
+.border-teal-light { border-color: rgba(255, 255, 255, 0.75) !important; }
 
 /* Animation utility classes */
 .animation-delay-2000 {
@@ -440,33 +477,22 @@ html[lang="en"], body[dir="ltr"] {
 
 /* Custom scrollbar */
 
-/* Admin page: force form controls to use white text to ensure readability in both themes */
-.admin-page input,
-.admin-page textarea,
-.admin-page select,
-.admin-page button {
-  color: #ffffff !important;
-}
-
-.admin-page input::placeholder,
-.admin-page textarea::placeholder {
-  color: rgba(255,255,255,0.7) !important;
-}
+/* Custom scrollbar overrides (kept for global appearance) */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e666c;
+  background: #46250A;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #164549;
+  background: #6F3F1A;
 }
 
 /* Smooth animations for all elements */
@@ -480,7 +506,7 @@ a:focus,
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid #fb6a44;
+  outline: 2px solid #F6A668;
   outline-offset: 2px;
 }
 
@@ -514,12 +540,12 @@ textarea:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e666c;
+  background: #46250A;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3b8a90;
+  background: #6F3F1A;
 }
 
 /* Smooth transitions for all interactive elements */
@@ -531,7 +557,7 @@ textarea:focus {
 button:focus,
 a:focus,
 [tabindex]:focus {
-  outline: 2px solid #fb6a44;
+  outline: 2px solid #F6A668;
   outline-offset: 2px;
 }
 
@@ -566,7 +592,7 @@ a:focus,
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #1e666c, #2563eb);
+  background: linear-gradient(90deg, #46250A, #7B4A22);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }

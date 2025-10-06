@@ -3,10 +3,7 @@ import type { NextRequest } from 'next/server';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function middleware(_request: NextRequest) {
-  // Allow access to admin page - authentication is handled client-side
+  // No global middleware is required at the moment.
   return NextResponse.next();
 }
 
-export const config = {
-  matcher: ['/admin/:path*']
-};
