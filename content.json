@@ -1,0 +1,60 @@
+{
+  "ar": {
+    "siteName": "هامات يوناتيد",
+    "tagline": "أفضل شركة حقن تربة في الدمام",
+    "description": "شركة هامات يوناتيد – خبرة طويلة في مجال حقن التربة والفحوصات الجيوتقنية.",
+    "navigation": {
+      "home": "الرئيسية",
+      "about": "من نحن",
+      "services": "خدماتنا",
+      "process": "كيف نعمل",
+      "testimonials": "آراء العملاء",
+      "contact": "اتصل بنا"
+    },
+    "hero": {
+      "badge": "حلول هندسية معتمدة",
+      "title": "أفضل شركة حقن تربة في الدمام",
+      "subtitle": "شركة هامات يوناتيد – خبرة طويلة في مجال حقن التربة والفحوصات الجيوتقنية.",
+      "feature1": "فحص قبل وبعد التنفيذ للتأكد من الجودة",
+      "feature2": "ضمان 10 سنوات على الأعمال",
+      "cta": "احصل على استشارة مجانية",
+      "ctaSecondary": "اتصل بنا الآن"
+    },
+    "contact": {
+      "title": "اتصل بنا",
+      "subtitle": "نحن هنا لخدمتك",
+      "phone": "الهاتف",
+      "email": "البريد الإلكتروني",
+      "address": "العنوان"
+    }
+  },
+  "en": {
+    "siteName": "Hamat United",
+    "tagline": "The Best Soil Injection Company in Dammam",
+    "description": "Hamat United Company – Long experience in soil injection and geotechnical testing.",
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "process": "How We Work",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+    "hero": {
+      "badge": "Certified Engineering Solutions",
+      "title": "The Best Soil Injection Company in Dammam",
+      "subtitle": "Hamat United Company – Long experience in soil injection and geotechnical testing.",
+      "feature1": "Inspection before and after implementation to ensure quality",
+      "feature2": "10-year warranty on work",
+      "cta": "Get Free Consultation",
+      "ctaSecondary": "Contact Us Now"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "We're here to serve you",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address"
+    }
+  }
+}
