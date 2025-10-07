@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import { useTheme } from '@/contexts/UnifiedThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { themeColors } from '@/lib/theme-utils';
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 
 const hexToRgba = (hex: string, alpha: number) => {
@@ -32,14 +33,18 @@ const FAQ = () => {
   const faqUI = faqUIGroup[language as keyof typeof faqUIGroup] ?? faqUIFallback;
 
   const palette = useMemo(() => {
-  const primary = isDark ? '#7DE1DA' : '#50B7AF';
-    const secondary = '#fb6a44';
-    const sectionBg = isDark ? '#0f172a' : '#f8fafc';
-    const cardBg = isDark ? '#111827' : '#ffffff';
-    const cardBorder = isDark ? 'rgba(99, 102, 241, 0.18)' : 'rgba(100, 116, 139, 0.22)';
-    const heading = isDark ? '#f8fafc' : '#0f172a';
-    const body = isDark ? '#cbd5f5' : '#475569';
-    const divider = isDark ? 'rgba(148, 163, 184, 0.2)' : 'rgba(148, 163, 184, 0.35)';
+    const primary = isDark ? '#8dd7c0' : '#134333';
+    const secondary = isDark ? '#49a389' : '#1f5c48';
+    const sectionBg = isDark
+      ? themeColors.background.dark.secondary
+      : themeColors.background.light.secondary;
+    const cardBg = isDark
+      ? themeColors.background.dark.primary
+      : themeColors.background.light.primary;
+    const cardBorder = isDark ? 'rgba(141, 215, 192, 0.25)' : 'rgba(19, 67, 51, 0.14)';
+    const heading = isDark ? themeColors.text.dark.primary : themeColors.text.light.primary;
+    const body = isDark ? themeColors.text.dark.secondary : themeColors.text.light.secondary;
+    const divider = isDark ? 'rgba(141, 215, 192, 0.22)' : 'rgba(19, 67, 51, 0.12)';
 
     return {
       accents: {
@@ -53,15 +58,15 @@ const FAQ = () => {
         backgroundColor: cardBg,
         borderColor: cardBorder,
         boxShadow: isDark
-          ? '0 24px 45px rgba(8, 15, 35, 0.55)'
-          : '0 20px 36px rgba(15, 23, 42, 0.12)'
+          ? '0 24px 45px rgba(6, 20, 16, 0.55)'
+          : '0 20px 36px rgba(19, 67, 51, 0.12)'
       },
       text: {
         heading,
         body
       },
       divider,
-      answerBg: isDark ? '#0b1120' : '#f1f5f9'
+      answerBg: isDark ? '#0d261f' : '#f1f7f4'
     };
   }, [isDark]);
 

@@ -116,11 +116,11 @@ export default function LogoCarousel() {
   };
 
   const palette = useMemo(() => {
-    const primary = isDark ? "#3A9C95" : "#50B7AF";
-    const secondary = "#fb6a44";
-    const surface = isDark ? "#101828" : "#ffffff";
-    const sectionBg = isDark ? "#0f172a" : "#f8fafc";
-    const border = isDark ? "rgba(148, 163, 184, 0.28)" : "rgba(15, 23, 42, 0.12)";
+    const primary = isDark ? "#78ccb6" : "#134333";
+    const secondary = isDark ? "#49a389" : "#1f5c48";
+    const surface = isDark ? "#0d211b" : "#ffffff";
+    const sectionBg = isDark ? "#10241d" : "#f1f7f4";
+    const border = isDark ? "rgba(120, 204, 182, 0.24)" : "rgba(19, 67, 51, 0.12)";
 
     return {
       primary,

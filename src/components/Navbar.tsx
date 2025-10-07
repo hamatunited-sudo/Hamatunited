@@ -77,9 +77,9 @@ const Navbar = () => {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-out ${
-        isScrolled 
-          ? 'bg-[#46250A]/98 shadow-[0_10px_40px_rgba(0,0,0,0.3)] backdrop-blur-xl border-b border-white/10' 
-          : 'bg-gradient-to-b from-[#46250A] to-[#46250A]/95'
+        isScrolled
+          ? 'bg-white/95 shadow-[0_12px_40px_rgba(19,67,51,0.12)] backdrop-blur-xl border-b border-[#d3e3dd]'
+          : 'bg-gradient-to-b from-white/95 via-[#f1f7f4]/90 to-white/70 backdrop-blur-xl'
       }`}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -93,21 +93,21 @@ const Navbar = () => {
             aria-label="العودة إلى بداية الصفحة"
           >
             {/* Logo image (no background square, larger) */}
-            <div className="relative h-16 w-16 transition-all duration-300">
-              <Image src="/HAMAT logo.svg" alt="شعار شركة هامات يوناتيد" fill sizes="64px" style={{ objectFit: 'contain' }} />
+            <div className="relative h-20 w-20 sm:h-24 sm:w-24 transition-all duration-300">
+              <Image src="/HAMAT logo.svg" alt="شعار شركة هامات يوناتيد" fill sizes="(max-width: 640px) 80px, 96px" style={{ objectFit: 'contain' }} />
             </div>
             <span className="flex flex-col text-right">
-              <span className="text-sm font-semibold tracking-wide text-white whitespace-nowrap">
+              <span className="text-base sm:text-lg font-semibold tracking-wide text-[#134333] whitespace-nowrap">
                 شركة هامات يوناتيد
               </span>
-              <span className="text-xs text-white/80 whitespace-nowrap">
+              <span className="text-sm sm:text-base text-[#3b6c5c] whitespace-nowrap hidden sm:block">
                 هندسة متخصصة في حقن التربة وضبط الجودة بعقود موثوقة
               </span>
             </span>
           </button>
 
           <div className="hidden items-center gap-8 lg:flex">
-            <ul className="flex items-center gap-2 text-sm font-semibold text-white/90">
+            <ul className="flex items-center gap-2 text-sm font-semibold text-[#134333]">
               {NAV_ITEMS.map((item) => {
                 const isActive = activeSection === item.id;
                 return (
@@ -116,8 +116,8 @@ const Navbar = () => {
                       onClick={() => scrollToSection(item.id)}
                       className={`rounded-xl px-5 py-2.5 transition-all duration-300 active:scale-95 ${
                         isActive
-                          ? 'bg-transparent text-white border border-[#F6A668] ring-1 ring-[#F6A668]/30 hover:border-[#F6A668]'
-                          : 'hover:bg-white/10 hover:text-white hover:shadow-lg hover:shadow-white/5'
+                          ? 'bg-[#134333] text-white shadow-[0_8px_20px_rgba(19,67,51,0.15)]'
+                          : 'text-[#134333] hover:bg-[#134333]/10 hover:text-[#0f3327]'
                       }`}
                     >
                       {item.label}
@@ -131,13 +131,13 @@ const Navbar = () => {
 
           <button
             onClick={() => setIsMobileOpen((prev) => !prev)}
-            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/30 bg-white/5 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:border-white/50 active:scale-90 lg:hidden"
+            className="inline-flex h-12 w-12 flex-col items-center justify-center gap-1.5 rounded-2xl border border-[#d3e3dd] bg-white text-[#134333] backdrop-blur-sm transition-all duration-300 hover:bg-[#f1f7f4] hover:border-[#b9d1c9] active:scale-90 lg:hidden"
             aria-label="فتح القائمة الرئيسية"
           >
             <span className="sr-only">القائمة الرئيسية</span>
             <span
-              className={`block h-0.5 w-6 transform rounded-full bg-current transition-transform duration-300 ${
-                isMobileOpen ? 'translate-y-1.5 rotate-45' : '-translate-y-2'
+              className={`block h-0.5 w-6 transform rounded-full bg-current transition-all duration-300 ${
+                isMobileOpen ? 'translate-y-2 rotate-45' : 'translate-y-0'
               }`}
             />
             <span
@@ -146,8 +146,8 @@ const Navbar = () => {
               }`}
             />
             <span
-              className={`block h-0.5 w-6 transform rounded-full bg-current transition-transform duration-300 ${
-                isMobileOpen ? '-translate-y-1.5 -rotate-45' : 'translate-y-2'
+              className={`block h-0.5 w-6 transform rounded-full bg-current transition-all duration-300 ${
+                isMobileOpen ? '-translate-y-2 -rotate-45' : 'translate-y-0'
               }`}
             />
           </button>
@@ -155,7 +155,7 @@ const Navbar = () => {
       </nav>
 
       <div
-        className={`fixed inset-x-0 top-[48px] z-40 origin-top border-t border-white/10 bg-gradient-to-b from-[#2C1505] to-[#1a0d03] shadow-[0_20px_50px_rgba(0,0,0,0.4)] backdrop-blur-xl transition-all duration-500 ease-out lg:hidden ${
+        className={`fixed inset-x-0 top-[48px] z-40 origin-top border-t border-[#d3e3dd] bg-white shadow-[0_20px_50px_rgba(19,67,51,0.08)] backdrop-blur-xl transition-all duration-500 ease-out lg:hidden ${
           isMobileOpen ? 'scale-y-100 opacity-100' : 'pointer-events-none scale-y-0 opacity-0'
         }`}
       >
@@ -169,10 +169,10 @@ const Navbar = () => {
                   scrollToSection(item.id);
                   setIsMobileOpen(false);
                 }}
-                className={`block w-full rounded-2xl px-5 py-4 text-right text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 active:scale-98 ${
+                className={`block w-full rounded-2xl px-5 py-4 text-right text-base font-semibold backdrop-blur-sm transition-all duration-300 active:scale-98 ${
                   isActive
-                    ? 'bg-transparent border border-[#F6A668] ring-1 ring-[#F6A668]/30'
-                    : 'border border-white/20 bg-white/5 hover:border-white/50 hover:bg-white/15 hover:shadow-lg hover:shadow-white/5'
+                    ? 'bg-[#134333] text-white shadow-[0_10px_24px_rgba(19,67,51,0.12)]'
+                    : 'text-[#134333] bg-[#f1f7f4] hover:bg-[#134333]/10 hover:text-[#0f3327]'
                 }`}
               >
                 {item.label}

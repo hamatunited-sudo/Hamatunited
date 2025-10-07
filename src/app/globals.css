@@ -2,49 +2,49 @@
 
 /* Enhanced CSS Variables for Smooth Theme Transitions */
 :root {
-  --background: #;
-  --foreground: 0 0% 9%;
-  --primary: 30 102 108;
-  --gold: 194 161 90;
-  --theme-accent: #F6A668; /* warm peach/orange used for selected states */
+  --background: 0 0% 100%;
+  --foreground: 160 56% 17%;
+  --primary: 19 67 51;
+  --gold: 31 92 72;
+  --theme-accent: #1f5c48; /* deep green accent for interactive states */
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 9%;
-  --border: 0 0% 89%;
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 45%;
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 9%;
+  --card-foreground: 160 56% 17%;
+  --border: 160 24% 78%;
+  --muted: 160 32% 94%;
+  --muted-foreground: 160 24% 35%;
+  --accent: 160 42% 96%;
+  --accent-foreground: 160 56% 17%;
   --transition-duration: 400ms;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
-  --scrollbar-thumb: #46250A;
-  --scrollbar-thumb-hover: #83522A;
-  --scrollbar-track: #291200;
+  --scrollbar-thumb: #134333;
+  --scrollbar-thumb-hover: #1f5c48;
+  --scrollbar-track: #d7e7e2;
 }
 
 .dark {
-  --background: 0 0% 4%;
-  --foreground: 0 0% 93%;
-  --card: 0 0% 6%;
-  --card-foreground: 0 0% 93%;
-  --border: 0 0% 15%;
-  --muted: 0 0% 10%;
-  --muted-foreground: 0 0% 60%;
-  --accent: 0 0% 10%;
-  --accent-foreground: 0 0% 93%;
-  --scrollbar-thumb: #3A9C95;
-  --scrollbar-thumb-hover: #50B7AF;
-  --scrollbar-track: rgba(58, 156, 149, 0.28);
+  --background: 160 32% 8%;
+  --foreground: 155 52% 92%;
+  --card: 160 35% 10%;
+  --card-foreground: 155 52% 92%;
+  --border: 160 26% 25%;
+  --muted: 160 24% 16%;
+  --muted-foreground: 155 32% 70%;
+  --accent: 160 22% 18%;
+  --accent-foreground: 155 52% 92%;
+  --scrollbar-thumb: #1f5c48;
+  --scrollbar-thumb-hover: #49a389;
+  --scrollbar-track: rgba(31, 92, 72, 0.35);
 }
 
 /* Prevent flash of unstyled content */
 html {
   --background: 0 0% 100%;
-  --foreground: 0 0% 9%;
+  --foreground: 160 56% 17%;
 }
 
 html.dark {
-  --background: 0 0% 4%;
-  --foreground: 0 0% 93%;
+  --background: 160 32% 8%;
+  --foreground: 155 52% 92%;
 }
 
 /* Theme-aware body and html with smooth transitions */
@@ -141,14 +141,14 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 /* Custom utilities for our brand colors */
-.text-teal { color: #ffffff !important; }
-.text-teal-light { color: rgba(255, 255, 255, 0.75) !important; }
-.text-cyan { color: rgba(255, 228, 199, 0.95) !important; }
-.text-gold { color: #ffd700 !important; }
+.text-teal { color: #134333 !important; }
+.text-teal-light { color: rgba(19, 67, 51, 0.75) !important; }
+.text-cyan { color: rgba(19, 67, 51, 0.6) !important; }
+.text-gold { color: #1f5c48 !important; }
 
-.bg-teal { background-color: #46250A !important; }
-.bg-teal-light { background-color: #6F3F1A !important; }
-.bg-cyan { background-color: #83522A !important; }
+.bg-teal { background-color: #134333 !important; }
+.bg-teal-light { background-color: #1f5c48 !important; }
+.bg-cyan { background-color: #e2f1ec !important; }
 
 /* Selected / active button utilities (theme-aware) */
 :root {
@@ -181,9 +181,9 @@ html::-webkit-scrollbar-thumb:hover {
 /* Small helper to invert text on the accent when used as filled background */
 .is-selected-filled {
   background: var(--theme-accent);
-  color: #46250A !important; /* dark text on peach */
+  color: #ffffff !important;
   border: none;
-  box-shadow: 0 8px 24px rgba(246,166,104,0.18);
+  box-shadow: 0 8px 24px rgba(19, 67, 51, 0.16);
 }
 
 /* Comprehensive Theme Transitions */
@@ -487,12 +487,12 @@ html[lang="en"], body[dir="ltr"] {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #46250A;
+  background: #134333;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6F3F1A;
+  background: #1f5c48;
 }
 
 /* Smooth animations for all elements */
@@ -506,7 +506,7 @@ a:focus,
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid #F6A668;
+  outline: 2px solid #1f5c48;
   outline-offset: 2px;
 }
 
@@ -540,12 +540,12 @@ textarea:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #46250A;
+  background: #134333;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6F3F1A;
+  background: #1f5c48;
 }
 
 /* Smooth transitions for all interactive elements */
@@ -557,7 +557,7 @@ textarea:focus {
 button:focus,
 a:focus,
 [tabindex]:focus {
-  outline: 2px solid #F6A668;
+  outline: 2px solid #1f5c48;
   outline-offset: 2px;
 }
 
@@ -592,7 +592,7 @@ a:focus,
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #46250A, #7B4A22);
+  background: linear-gradient(90deg, #134333, #1f5c48);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }

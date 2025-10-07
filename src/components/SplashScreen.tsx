@@ -56,7 +56,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           <div
             className="absolute -inset-7 rounded-full opacity-25 animate-pulse"
             style={{
-              background: 'radial-gradient(circle, rgba(251, 106, 68, 0.55) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(19, 67, 51, 0.45) 0%, transparent 70%)',
               filter: 'blur(26px)',
             }}
           />
@@ -70,13 +70,13 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                   <stop offset="100%" stopColor={isDark ? 'rgba(255,255,255,0.05)' : 'rgba(15,23,42,0.06)'} />
                 </linearGradient>
                 <linearGradient id="splashRingActive" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#ffd3c3" />
-                  <stop offset="45%" stopColor="#fb6a44" />
-                  <stop offset="100%" stopColor="#fd8b62" />
+                  <stop offset="0%" stopColor="#d8efe6" />
+                  <stop offset="45%" stopColor="#49a389" />
+                  <stop offset="100%" stopColor="#134333" />
                 </linearGradient>
                 <radialGradient id="splashOrb" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stopColor="#fff1ea" />
-                  <stop offset="100%" stopColor="#fb6a44" />
+                  <stop offset="0%" stopColor="#e6f5ef" />
+                  <stop offset="100%" stopColor="#134333" />
                 </radialGradient>
               </defs>
 

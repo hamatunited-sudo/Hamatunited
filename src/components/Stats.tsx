@@ -79,8 +79,16 @@ const Stats = () => {
   const countBeneficiaries = useCount(statsContent.beneficiaries ?? 0, statsVisible, 1400, 160);
   const countYears = useCount(statsContent.years ?? 0, statsVisible, 1400, 240);
 
-  const baseRing = isDark ? 'ring-gray-700/40' : 'ring-gray-200/60';
-  const accentRing = isDark ? 'ring-[#7DE1DA]/35' : 'ring-[#50B7AF]/25';
+  const accentRing = isDark ? 'ring-white/15' : 'ring-white/30';
+  const secondaryAccentBackground = isDark ? 'bg-[#49a389]' : 'bg-[#1f5c48]';
+  const secondaryAccentText = 'text-white';
+  const secondaryAccentRing = isDark ? 'ring-[#49a389]/35' : 'ring-[#1f5c48]/30';
+  const cardBaseClass = isDark
+    ? 'bg-[#133329] border border-[#1e4034] text-[#e3f2ed]'
+    : 'bg-[#134333] border border-[#1f5c48] text-white';
+  const cardSecondaryText = isDark ? 'text-[#c2d8cf]' : 'text-[#d9ece5]';
+  const highlightBar = isDark ? 'bg-[#49a389]' : 'bg-white/35';
+  const secondaryBar = isDark ? 'bg-[#8dd7c0]' : 'bg-[#49a389]';
 
   type StatItem = {
     key: string;
@@ -98,31 +106,31 @@ const Stats = () => {
       key: 'sessions',
       Icon: Clock3,
       value: countSessions,
-  label: statsLabels.sessions ?? '',
-      accentBackground: theme.accent,
-      accentText: theme.accentText,
+      label: statsLabels.sessions ?? '',
+      accentBackground: isDark ? 'bg-[#49a389]' : 'bg-white/10',
+      accentText: 'text-white',
       ring: `ring-1 ${accentRing}`,
-  bar: isDark ? 'bg-[#7DE1DA]' : 'bg-[#50B7AF]'
+      bar: highlightBar
     },
     {
       key: 'consultations',
       Icon: MessagesSquare,
       value: countConsultations,
-  label: statsLabels.consultations ?? '',
-      accentBackground: 'bg-[#fb6a44]',
-      accentText: 'text-[#fb6a44]',
-      ring: 'ring-1 ring-[#fb6a44]/35',
-      bar: 'bg-[#fb6a44]'
+      label: statsLabels.consultations ?? '',
+      accentBackground: secondaryAccentBackground,
+      accentText: secondaryAccentText,
+      ring: `ring-1 ${secondaryAccentRing}`,
+      bar: secondaryBar
     },
     {
       key: 'beneficiaries',
       Icon: Users2,
       value: countBeneficiaries,
-  label: statsLabels.beneficiaries ?? '',
-      accentBackground: theme.accent,
-      accentText: theme.accentText,
+      label: statsLabels.beneficiaries ?? '',
+      accentBackground: isDark ? 'bg-[#49a389]' : 'bg-white/10',
+      accentText: 'text-white',
       ring: `ring-1 ${accentRing}`,
-  bar: isDark ? 'bg-[#7DE1DA]' : 'bg-[#50B7AF]'
+      bar: highlightBar
     }
   ];
 
@@ -131,11 +139,11 @@ const Stats = () => {
       key: 'years',
       Icon: Award,
       value: countYears,
-  label: statsLabels.years ?? '',
-      accentBackground: 'bg-[#fb6a44]',
-      accentText: 'text-[#fb6a44]',
-      ring: `ring-1 ${baseRing}`,
-      bar: 'bg-[#fb6a44]'
+      label: statsLabels.years ?? '',
+      accentBackground: secondaryAccentBackground,
+      accentText: secondaryAccentText,
+      ring: `ring-1 ${secondaryAccentRing}`,
+      bar: secondaryBar
     });
   }
 
@@ -147,18 +155,18 @@ const Stats = () => {
             isDark ? 'border-gray-700 bg-gray-900/70' : 'border-gray-100 bg-white'
           } px-6 py-12 sm:px-10 sm:py-14 shadow-xl transition-shadow duration-300`}
         >
-          <span className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-[#fb6a44]" />
+          <span className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-[#134333]" />
           <span
-            className={`pointer-events-none absolute -left-16 bottom-10 h-36 w-36 rounded-full bg-[#fb6a44]/10`}
+            className={`pointer-events-none absolute -left-16 bottom-10 h-36 w-36 rounded-full bg-[#134333]/10`}
           />
           <span
             className={`pointer-events-none absolute -right-20 top-12 h-40 w-40 rounded-full ${
-              isDark ? 'bg-[#7DE1DA]/10' : 'bg-[#50B7AF]/10'
+              isDark ? 'bg-[#78ccb6]/10' : 'bg-[#8dd7c0]/10'
             }`}
           />
 
           <div className="relative text-center">
-            <span className="inline-flex items-center justify-center rounded-full bg-[#fb6a44]/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-[#fb6a44]">
+            <span className="inline-flex items-center justify-center rounded-full bg-[#134333]/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-[#134333]">
               {sectionCopy.eyebrow}
             </span>
             <h2 className={`mt-4 text-2xl sm:text-3xl md:text-4xl font-bold ${theme.textPrimary}`}>
@@ -173,11 +181,7 @@ const Stats = () => {
             {statsData.map((item) => (
               <div
                 key={item.key}
-                className={`${
-                  theme.card
-                } group relative overflow-hidden rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
-                  item.ring
-                }`}
+                className={`${cardBaseClass} group relative overflow-hidden rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${item.ring}`}
               >
                 <span className={`absolute inset-x-0 top-0 h-1 ${item.bar}`} />
                 <div className="relative flex flex-col items-center gap-4 text-center">
@@ -187,7 +191,7 @@ const Stats = () => {
                   <div className={`text-4xl font-extrabold tracking-tight ${item.accentText}`}>
                     +{item.value}
                   </div>
-                  <div className={`text-sm font-semibold sm:text-base ${theme.textSecondary}`}>
+                  <div className={`text-sm font-semibold sm:text-base ${cardSecondaryText}`}>
                     {item.label}
                   </div>
                 </div>

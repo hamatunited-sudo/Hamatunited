@@ -296,13 +296,13 @@ const Testimonials = () => {
       : visibleIndices.length === 2
       ? 'grid-cols-1 sm:grid-cols-2'
       : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
-  const accentBaseColor = '#2a8891';
-  const accentSecondary = '#fb6a44';
-  const accentGlowPrimary = isDark ? 'rgba(42, 136, 145, 0.3)' : 'rgba(42, 136, 145, 0.18)';
-  const accentGlowSecondary = isDark ? 'rgba(251, 106, 68, 0.28)' : 'rgba(251, 106, 68, 0.18)';
+  const accentBaseColor = '#134333';
+  const accentSecondary = '#1f5c48';
+  const accentGlowPrimary = isDark ? 'rgba(120, 204, 182, 0.28)' : 'rgba(19, 67, 51, 0.18)';
+  const accentGlowSecondary = isDark ? 'rgba(73, 163, 137, 0.24)' : 'rgba(31, 92, 72, 0.18)';
   const focusRingClass = isDark
-    ? 'focus-visible:ring-[#fb6a44] focus-visible:ring-offset-gray-900'
-    : 'focus-visible:ring-[#fb6a44] focus-visible:ring-offset-white';
+    ? 'focus-visible:ring-[#49a389] focus-visible:ring-offset-gray-900'
+    : 'focus-visible:ring-[#134333] focus-visible:ring-offset-white';
 
   if (!testimonials.length) {
     return null;
@@ -358,12 +358,12 @@ const Testimonials = () => {
               const textDirectionClass = isRtl ? 'text-right' : 'text-left';
               const flexDirectionClass = isRtl ? 'flex-row-reverse' : 'flex-row';
               const accentGlow = isPrimary ? `${accentSecondary}35` : `${accentColor}28`;
-              const cardBorderColor = isPrimary ? accentSecondary : (isDark ? '#334155' : '#d9e3e4');
+              const cardBorderColor = isPrimary ? accentSecondary : (isDark ? '#214938' : '#1f5c48');
               const cardAccent = isPrimary ? accentSecondary : accentColor;
-              const cardBackground = '#EEF1F1';
-              const cardPrimaryText = isDark ? 'text-slate-900' : theme.textPrimary;
-              const cardSecondaryText = isDark ? 'text-slate-700' : theme.textSecondary;
-              const cardMutedText = isDark ? 'text-slate-500' : theme.textSecondary;
+              const cardBackground = isDark ? '#133329' : '#134333';
+              const cardPrimaryText = isDark ? 'text-[#e3f2ed]' : 'text-white';
+              const cardSecondaryText = isDark ? 'text-[#c2d8cf]' : 'text-[#d9ece5]';
+              const cardMutedText = isDark ? 'text-[#9ab6ab]' : 'text-[#bcded2]';
 
               return (
                 <article
@@ -373,8 +373,8 @@ const Testimonials = () => {
                     borderColor: cardBorderColor,
                     backgroundColor: cardBackground,
                     boxShadow: isPrimary
-                      ? (isDark ? '0 24px 40px rgba(15, 23, 42, 0.45)' : '0 24px 46px rgba(251, 106, 68, 0.22)')
-                      : (isDark ? '0 16px 32px rgba(15, 23, 42, 0.28)' : '0 14px 30px rgba(80, 183, 175, 0.18)')
+                      ? (isDark ? '0 24px 40px rgba(15, 30, 25, 0.45)' : '0 24px 46px rgba(19, 67, 51, 0.22)')
+                      : (isDark ? '0 16px 32px rgba(15, 30, 25, 0.28)' : '0 14px 30px rgba(73, 163, 137, 0.16)')
                   }}
                 >
                   <span
@@ -382,11 +382,11 @@ const Testimonials = () => {
                     style={{ backgroundColor: cardAccent, opacity: 0.7 }}
                   />
                   <span
-                    className={`pointer-events-none absolute ${isRtl ? 'left-6' : 'right-6'} top-6 flex h-9 w-9 items-center justify-center rounded-2xl bg-white/15 shadow-inner`}
+                    className={`pointer-events-none absolute ${isRtl ? 'left-6' : 'right-6'} top-6 flex h-9 w-9 items-center justify-center rounded-2xl bg-white/12 shadow-inner`}
                     style={{
                       color: cardAccent,
                       border: `1px solid ${cardAccent}30`,
-                      backgroundColor: isDark ? 'rgba(255,255,255,0.12)' : '#ffffff',
+                      backgroundColor: isDark ? 'rgba(255,255,255,0.12)' : 'rgba(255,255,255,0.08)',
                     }}
                   >
                     <QuoteIcon className="h-4 w-4" color={cardAccent} />
@@ -442,8 +442,8 @@ const Testimonials = () => {
                 aria-current={index === currentIndex}
                 className={`h-2.5 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${focusRingClass} ${
                   index === currentIndex
-                    ? 'w-6 bg-[#fb6a44]'
-                    : 'w-2.5 bg-[#fb6a44]/30 hover:bg-[#fb6a44]/60'
+                    ? 'w-6 bg-[#134333]'
+                    : 'w-2.5 bg-[#134333]/20 hover:bg-[#134333]/50'
                 }`}
               />
             ))}

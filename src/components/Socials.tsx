@@ -53,15 +53,15 @@ const Socials = () => {
   }, []);
 
   const palette = useMemo(() => {
-  const primary = isDark ? '#7DE1DA' : '#50B7AF';
-    const secondary = '#fb6a44';
+    const primary = isDark ? '#78ccb6' : '#134333';
+    const secondary = isDark ? '#49a389' : '#1f5c48';
 
     return {
-      sectionBg: isDark ? '#0f172a' : '#f8fafc',
-      cardBg: isDark ? '#111827' : '#ffffff',
-      cardBorder: isDark ? 'rgba(148, 163, 184, 0.28)' : 'rgba(148, 163, 184, 0.22)',
-      textPrimary: isDark ? '#f8fafc' : '#0f172a',
-      textSecondary: isDark ? '#cbd5f5' : '#475569',
+      sectionBg: isDark ? '#10241d' : '#f1f7f4',
+      cardBg: isDark ? '#133329' : '#ffffff',
+      cardBorder: isDark ? 'rgba(73, 163, 137, 0.35)' : 'rgba(19, 67, 51, 0.12)',
+      textPrimary: isDark ? '#e3f2ed' : '#134333',
+      textSecondary: isDark ? '#c2d8cf' : '#3b6c5c',
       accents: {
         primary,
         secondary

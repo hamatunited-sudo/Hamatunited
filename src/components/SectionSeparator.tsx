@@ -6,11 +6,11 @@ const SectionSeparator = () => {
   const { isDark } = useTheme();
 
   const lineGradient = isDark
-    ? 'from-transparent via-white/40 to-transparent'
-    : 'from-transparent via-[#F6D3B4] to-transparent';
+    ? 'from-transparent via-white/35 to-transparent'
+    : 'from-transparent via-[#d3e3dd] to-transparent';
 
-  const accentBase = isDark ? 'bg-white/70 shadow-white/40' : 'bg-[#F6A668] shadow-[#F7C79D]/60';
-  const accentGlow = isDark ? 'bg-white/10' : 'bg-[#F1C59B]/40';
+  const accentBase = isDark ? 'bg-white/70 shadow-white/40' : 'bg-[#134333] shadow-[#49a389]/40';
+  const accentGlow = isDark ? 'bg-white/10' : 'bg-[#134333]/20';
 
   return (
     <div className="relative flex w-full items-center justify-center py-12">

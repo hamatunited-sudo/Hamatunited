@@ -12,8 +12,8 @@ const WhatsAppFloat = () => {
   const [isPulse, setIsPulse] = useState(true);
   // Button color classes: in light mode show white button with brown icon, hover flips to brown with white icon
   const btnClasses = isDark
-    ? 'relative w-16 h-16 bg-[#6D3C1F] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group'
-    : 'relative w-16 h-16 bg-white text-[#46250A] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group hover:bg-[#46250A] hover:text-white';
+  ? 'relative w-16 h-16 bg-[#134333] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group hover:bg-[#0f3327]'
+  : 'relative w-16 h-16 bg-white text-[#134333] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group hover:bg-[#134333] hover:text-white';
 
   // Pulse ring: use brown in dark mode, white in light mode (flipped)
   const ringClass = isDark ? theme.accent : 'bg-white';

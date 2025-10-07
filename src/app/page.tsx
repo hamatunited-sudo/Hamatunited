@@ -7,7 +7,6 @@ import Services from '@/components/Services';
 import WhyChooseMe from '@/components/WhyChooseMe';
 import Process from '@/components/Process';
 import BlogSection from '@/components/BlogSection';
-import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import SectionSeparator from '@/components/SectionSeparator';
 
@@ -15,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-  <main className="bg-[#46250A] text-white">
+  <main className="bg-white text-[#134333]">
     <Hero />
     <SectionSeparator />
     <About />
@@ -27,8 +26,6 @@ export default function Home() {
     <Process />
     <SectionSeparator />
     <BlogSection />
-    <SectionSeparator />
-    <ContactSection />
       </main>
       <Footer />
     </>

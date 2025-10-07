@@ -10,10 +10,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#46250A',
-        gold: '#c2a15a',
-        text: '#222',
-        muted: '#6b7280',
+        primary: '#134333',
+        primaryDark: '#0d2d24',
+        primaryLight: '#1f5c48',
+        surface: '#ffffff',
+        surfaceMuted: '#f1f7f4',
+        text: '#134333',
+        muted: '#517869',
+        border: '#d3e3dd',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
       },
