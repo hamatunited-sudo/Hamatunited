@@ -107,14 +107,14 @@ const Navbar = () => {
           </button>
 
           <div className="hidden items-center gap-8 lg:flex">
-            <ul className="flex items-center gap-2 text-sm font-semibold text-[#134333]">
+            <ul className="flex items-center gap-1 xl:gap-2 text-sm font-semibold text-[#134333] flex-nowrap">
               {NAV_ITEMS.map((item) => {
                 const isActive = activeSection === item.id;
                 return (
-                  <li key={item.id}>
+                  <li key={item.id} className="shrink-0">
                     <button
                       onClick={() => scrollToSection(item.id)}
-                      className={`rounded-xl px-5 py-2.5 transition-all duration-300 active:scale-95 ${
+                      className={`rounded-xl px-3 xl:px-5 py-2.5 transition-all duration-300 active:scale-95 whitespace-nowrap ${
                         isActive
                           ? 'bg-[#134333] text-white shadow-[0_8px_20px_rgba(19,67,51,0.15)]'
                           : 'text-[#134333] hover:bg-[#134333]/10 hover:text-[#0f3327]'
