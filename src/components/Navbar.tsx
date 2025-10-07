@@ -15,7 +15,6 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'advantages', label: 'لماذا هامات يوناتيد؟' },
   { id: 'process', label: 'خطوات العمل' },
   { id: 'blog', label: 'المدونة' },
-  { id: 'contact', label: 'اتصل بنا' },
 ];
 
 const scrollToSection = (sectionId: string) => {
